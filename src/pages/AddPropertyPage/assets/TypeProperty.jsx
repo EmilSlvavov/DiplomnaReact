@@ -16,7 +16,7 @@ const MenuProps = {
   },
 };
 
-const names = ["Apartment", "House", "Land", "Office"];
+const names = ["Apartment", "House", "Office"];
 
 function getStyles(name, personName, theme) {
   return {
