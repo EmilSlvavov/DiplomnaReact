@@ -28,6 +28,7 @@ export default function Property({ myJwt, propertyId }) {
   const [elevator, setElevetor] = useState("");
   const [furnished, setFurnished] = useState("");
   const [listingType, setListingType] = useState("");
+  const [ownerName, setOwnerName] = useState("");
   const [image, setImage] = useState(null);
 
   const getUserId = async () => {
@@ -74,6 +75,7 @@ export default function Property({ myJwt, propertyId }) {
           getImage(response.data.imageName);
 
           setOwnerId(response.data.user.id);
+          setOwnerName(response.data.user.name);
         });
     } catch (err) {
       console.log(err);
@@ -161,6 +163,7 @@ export default function Property({ myJwt, propertyId }) {
               Build Type: {buildType}
               <br />
               Listing Type: {listingType} <br />
+              Property Owner: {ownerName} <br />
             </p>
             {(isAdmin || selfId === ownerId) && (
               <Button

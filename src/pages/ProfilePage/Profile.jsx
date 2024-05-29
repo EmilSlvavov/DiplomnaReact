@@ -138,99 +138,96 @@ export default function Profile({ myJwt, setJwt }) {
         <img className="pfp" src={image} />
       )}
       <div className="details">
-        <p className="info">
-          Name: {name}
-          <br />
-        </p>
-        <p className="info">
-          Email: {email}
-          <br />
-        </p>
-        <p className="info">
-          Phone Number: {phoneNumber}
-          <br />
-        </p>
-        <Button
-          style={{
-            position: "absolute",
-            backgroundColor: "#a393eb",
-            color: "white",
-            top: 5,
-            right: 5,
-          }}
-          onClick={() => {
-            navigate("/editprofile");
-          }}
-        >
-          Edit
-        </Button>
-        <Button
-          style={{
-            position: "absolute",
-            backgroundColor: "#a393eb",
-            color: "white",
-            top: 60,
-            right: 5,
-          }}
-          onClick={() => {
-            handleClick();
-          }}
-        >
-          Delete Account
-        </Button>
-        <Button
-          style={{
-            position: "absolute",
-            backgroundColor: "#a393eb",
-            color: "white",
-            top: 115,
-            right: 5,
-          }}
-          onClick={() => {
-            setJwt("");
-            navigate("/");
-            setLoggedIn(false);
-            setIsAdmin(false);
-          }}
-        >
-          Logout
-        </Button>
-        <Button
-          style={{
-            position: "absolute",
-            backgroundColor: "#a393eb",
-            color: "white",
-            top: 170,
-            right: 5,
-          }}
-          onClick={() => {
-            navigate("/addproperty");
-          }}
-        >
-          Add Property
-        </Button>
-        <div className="post-images">
-          <input
-            id="button-for-images-profile"
-            type="file"
-            onChange={handleAddingImage}
-          />
-          <label htmlFor="button-for-images-profile">ADD PROFILE IMAGE</label>
+        <div className="user-info">
+          <p className="info">
+            Name: {name}
+            <br />
+          </p>
+          <p className="info">
+            Email: {email}
+            <br />
+          </p>
+          <p className="info">
+            Phone Number: {phoneNumber}
+            <br />
+          </p>
         </div>
-        <Button
-          style={{
-            position: "absolute",
-            backgroundColor: "#a393eb",
-            color: "white",
-            top: 280,
-            right: 5,
-          }}
-          onClick={() => {
-            handleImage();
-          }}
-        >
-          SAVE
-        </Button>
+        <div className="button-functions">
+          <Button
+            style={{
+              width: "200px",
+              backgroundColor: "#a393eb",
+              color: "white",
+            }}
+            onClick={() => {
+              navigate("/editprofile");
+            }}
+          >
+            Edit
+          </Button>
+          <Button
+            style={{
+              width: "200px",
+              backgroundColor: "#a393eb",
+              color: "white",
+            }}
+            onClick={() => {
+              handleClick();
+            }}
+          >
+            Delete Account
+          </Button>
+          <Button
+            style={{
+              width: "200px",
+              backgroundColor: "#a393eb",
+              color: "white",
+            }}
+            onClick={() => {
+              setJwt("");
+              navigate("/");
+              setLoggedIn(false);
+              setIsAdmin(false);
+            }}
+          >
+            Logout
+          </Button>
+          <Button
+            style={{
+              width: "200px",
+              backgroundColor: "#a393eb",
+              color: "white",
+            }}
+            onClick={() => {
+              navigate("/addproperty");
+            }}
+          >
+            Add Property
+          </Button>
+          <div className="post-images">
+            <input
+              id="button-for-images-profile"
+              type="file"
+              onChange={handleAddingImage}
+            />
+            <label htmlFor="button-for-images-profile">ADD PROFILE IMAGE</label>
+          </div>
+          <Button
+            style={{
+              width: "200px",
+              backgroundColor: "#a393eb",
+              color: "white",
+            }}
+            onClick={() => {
+              handleImage();
+              useEffect(() => {
+                getValues();
+              }, []);
+            }}
+          >
+            SAVE
+          </Button>
+        </div>
       </div>
     </div>
   );

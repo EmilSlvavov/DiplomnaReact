@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
+import default_pfp from "./default_pfp.jpg";
 import axios from "axios";
 
 export default function UserListing1({ name, imageName, setUserId, id }) {
@@ -44,15 +45,27 @@ export default function UserListing1({ name, imageName, setUserId, id }) {
           navigate("/otherprofile");
         }}
       >
-        <img
-          src={image}
-          style={{
-            aspectRatio: "16/9",
-            objectFit: "cover",
-            maxHeight: "260px",
-            minWidth: 450,
-          }}
-        ></img>
+        {image != null ? (
+          <img
+            src={image}
+            style={{
+              aspectRatio: "16/9",
+              objectFit: "cover",
+              maxHeight: "260px",
+              minWidth: 450,
+            }}
+          ></img>
+        ) : (
+          <img
+            src={default_pfp}
+            style={{
+              aspectRatio: "16/9",
+              objectFit: "cover",
+              maxHeight: "260px",
+              minWidth: 450,
+            }}
+          ></img>
+        )}
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name[0]}

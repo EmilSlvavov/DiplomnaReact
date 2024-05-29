@@ -5,6 +5,7 @@ html {
 }
 
 .wrapper-add-property {
+  min-width: 400px;
   width: 27%;
   margin: 0 auto;
   display: grid;

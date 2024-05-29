@@ -162,109 +162,103 @@ export default function OtherProfile({ myJwt, setJwt, userId }) {
         <img className="pfp" src={image} />
       )}
       <div className="details">
-        <p className="info">
-          Name: {name}
-          <br />
-        </p>
-        <p className="info">
-          Email: {email}
-          <br />
-        </p>
-        <p className="info">
-          Phone Number: {phoneNumber}
-          <br />
-        </p>
-        {(isAdmin || selfId === userId) && (
-          <>
-            <Button
-              style={{
-                position: "absolute",
-                backgroundColor: "#a393eb",
-                color: "white",
-                top: 5,
-                right: 5,
-              }}
-              onClick={() => {
-                navigate("/editotherprofile");
-              }}
-            >
-              Edit
-            </Button>
-            <Button
-              style={{
-                position: "absolute",
-                backgroundColor: "#a393eb",
-                color: "white",
-                top: 60,
-                right: 5,
-              }}
-              onClick={() => {
-                handleClick();
-              }}
-            >
-              Delete Account
-            </Button>
-          </>
-        )}
-        {selfId === userId && (
-          <>
-            <Button
-              style={{
-                position: "absolute",
-                backgroundColor: "#a393eb",
-                color: "white",
-                top: 115,
-                right: 5,
-              }}
-              onClick={() => {
-                setJwt("");
-                navigate("/"), setLoggedIn(false);
-              }}
-            >
-              Logout
-            </Button>
-            <Button
-              style={{
-                position: "absolute",
-                backgroundColor: "#a393eb",
-                color: "white",
-                top: 170,
-                right: 5,
-              }}
-              onClick={() => {
-                navigate("/addproperty");
-              }}
-            >
-              Add Property
-            </Button>
-          </>
-        )}
-        {(isAdmin || selfId === userId) && (
-          <>
-            <div className="post-images">
-              <input
-                id="button-for-images-profile"
-                type="file"
-                onChange={handleAddingImage}
-              />
-              <label htmlFor="button-for-images-profile">
-                ADD PROFILE IMAGE
-              </label>
-            </div>
-            <Button
-              style={{
-                position: "absolute",
-                backgroundColor: "#a393eb",
-                color: "white",
-                top: 280,
-                right: 5,
-              }}
-              onClick={handleImage}
-            >
-              SAVE
-            </Button>
-          </>
-        )}
+        <div className="user-info">
+          <p className="info">
+            Name: {name}
+            <br />
+          </p>
+          <p className="info">
+            Email: {email}
+            <br />
+          </p>
+          <p className="info">
+            Phone Number: {phoneNumber}
+            <br />
+          </p>
+        </div>
+        <div className="button-functions">
+          {(isAdmin || selfId === userId) && (
+            <>
+              <Button
+                style={{
+                  width: "200px",
+                  backgroundColor: "#a393eb",
+                  color: "white",
+                }}
+                onClick={() => {
+                  navigate("/editotherprofile");
+                }}
+              >
+                Edit
+              </Button>
+              <Button
+                style={{
+                  width: "200px",
+                  backgroundColor: "#a393eb",
+                  color: "white",
+                }}
+                onClick={() => {
+                  handleClick();
+                }}
+              >
+                Delete Account
+              </Button>
+            </>
+          )}
+          {selfId === userId && (
+            <>
+              <Button
+                style={{
+                  width: "200px",
+                  backgroundColor: "#a393eb",
+                  color: "white",
+                }}
+                onClick={() => {
+                  setJwt("");
+                  navigate("/"), setLoggedIn(false);
+                }}
+              >
+                Logout
+              </Button>
+              <Button
+                style={{
+                  width: "200px",
+                  backgroundColor: "#a393eb",
+                  color: "white",
+                }}
+                onClick={() => {
+                  navigate("/addproperty");
+                }}
+              >
+                Add Property
+              </Button>
+            </>
+          )}
+          {(isAdmin || selfId === userId) && (
+            <>
+              <div className="post-images">
+                <input
+                  id="button-for-images-profile"
+                  type="file"
+                  onChange={handleAddingImage}
+                />
+                <label htmlFor="button-for-images-profile">
+                  ADD PROFILE IMAGE
+                </label>
+              </div>
+              <Button
+                style={{
+                  width: "200px",
+                  backgroundColor: "#a393eb",
+                  color: "white",
+                }}
+                onClick={handleImage}
+              >
+                SAVE
+              </Button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

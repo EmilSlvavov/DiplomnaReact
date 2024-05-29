@@ -1,10 +1,8 @@
 import * as React from "react";
-import MultipleSelectPlaceholderProperty from "../SearchPage/assets/DropdownTypeProperty";
 import MultipleSelectBuildPropertyType from "../AddPropertyPage/assets/PropertyBuildTypeDrop";
 import MultipleSelectAct16 from "../AddPropertyPage/assets/Act16";
 import MultipleSelectElevator from "../AddPropertyPage/assets/Elevator";
 import MultipleSelectFurnished from "../AddPropertyPage/assets/Furnished";
-import MultipleSelectPlaceholderRegion from "../SearchPage/assets/DropdownRegion";
 import MultipleSelectListing from "../AddPropertyPage/assets/Listing";
 import { useNavigate } from "react-router";
 import { useState } from "react";
@@ -58,7 +56,8 @@ export default function EditProperty({ myJwt, propertyId }) {
         }
       )
       .then((resp) => {
-        addImage(resp.data.id), navigate("/profile");
+        addImage(resp.data.id);
+        navigate("/");
       });
   };
 
@@ -159,7 +158,7 @@ export default function EditProperty({ myJwt, propertyId }) {
           <input
             id="add-button"
             type="button"
-            defaultValue="Add property"
+            defaultValue="Edit property"
             onClick={handleClick}
           />
         </div>

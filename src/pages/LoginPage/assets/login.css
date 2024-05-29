@@ -6,6 +6,7 @@
 }
 
 .login {
+  min-width: 350px;
   width: 27%;
   margin: 0 auto;
   height: 40%;
