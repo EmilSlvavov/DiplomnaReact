@@ -4,7 +4,6 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router";
-import house1 from "./house1.jpg";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";

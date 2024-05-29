@@ -1,7 +1,6 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router";
-import house1 from "./assets/house1.jpg";
 import "./assets/property.css";
 import axios from "axios";
 import { useEffect } from "react";
