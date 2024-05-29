@@ -1,0 +1,55 @@
+.property-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ad {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 30%;
+  min-width: 258px;
+  background-color: #5e63b6;
+  color: white;
+  margin-right: 7%;
+  margin: 30px 0px 30px 0px;
+  justify-content: space-between;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.description {
+  position: relative;
+  height: 70%;
+  width: 30%;
+  min-width: 258px;
+  background-color: #5e63b6;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.image {
+  bottom: 0;
+  width: 97%;
+  margin: 0 1.5% 1.5%;
+  background-color: rgb(162, 162, 255);
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  max-height: 340px;
+}
+
+.data {
+  height: 100%;
+}
+
+.notes {
+  background-color: rgb(162, 162, 255);
+  padding-top: 0.01%;
+  height: 50%;
+}

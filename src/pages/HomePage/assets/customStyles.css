@@ -1,0 +1,13 @@
+.customStyles button {
+  color: white;
+  background-color: #a393eb;
+}
+
+.customStyles button:hover {
+  background-color: #c7bef3;
+  color: white;
+}
+
+.customStyles div {
+  color: white;
+}

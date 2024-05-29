@@ -1,0 +1,44 @@
+.wrapper-add-property {
+  width: 27%;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #5e63b6;
+  padding: 50px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  margin-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 10%;
+}
+
+h2 {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.input-text {
+  height: 52px;
+  margin: 18px 0;
+  margin-top: 11.5%;
+}
+
+form .input-text input {
+  height: 100%;
+  width: 85%;
+  margin-left: 2.2%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+#sqm {
+  margin-top: 7%;
+}
