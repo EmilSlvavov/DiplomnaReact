@@ -66,7 +66,7 @@ export default function ActionAreaCard2({
             {propertyType[1]}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {sqMeters[1] * pricePerSqMeter[1]}Bgn, {listingType[1]}
+            {sqMeters[1] * pricePerSqMeter[1]}EUR, {listingType[1]}
           </Typography>
         </CardContent>
       </CardActionArea>
